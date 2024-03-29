@@ -1,0 +1,31 @@
+Part-B: (20 points) In a text file, provide answers for the following questions:
+1. How did you organize your code to implement all the required tasks? Describe in detail the task of each segment/function in your program?
+ - I organized the BST into classes and functions.
+ - TreeNode class is representing a single Node in the tree
+ - BinarySearchTree class is manging the entire tree.
+   - add(int aData) is adding a value to the tree.
+     - add(TreeNode* aNode, int aData) is the helper class for add(int aData). It is adding the values recursively
+   - remove(int aData) is deleting the requested value from the tree.
+     - remove(TreeNode* aNode, int aData) is the helper class for remove(int aData). 
+   - findMinInTree(TreeNode* aNode) is finding the smallest value in the sub tree
+   - search(int aData) is searching for a value in the tree
+     - search(TreeNode* aNode, int aData) is the helper class for search(int aData). It is search the tree recursively.
+   - printPath(TreeNode* aNode, int aData) is printing the path for the tree
+   - findSmallest() returns the smallest value in the tree
+   - findLargest() returnes the largest value in the tree
+   - display() is printing the tree and using inOrderTraversal(TreeNode* aNode) so the list is in number order. 
+   - inOrderTraversal(TreeNode* aNode) is putting the tree in number order from 1 to the largest number in th tree. 
+ - Main funtion is where the program is running
+  - I used a do-while loop with the switch-case function in the body of it so it would be in a menu formate. It allows the user to choose what they would like to do in th tree. 
+   - Insert would be adding a value that the user requests. It will call the add function in the BST class  and will display the tree after it is added. The function will return the phase of whether or not the Node has been added.
+   - Delete would call for the remove function and delete the Node that the user request. The function will return whether or not the Node is deleted or if the Node can't be found
+   - Search will call for the search function in BST and search for the given Node. 
+   - Find Smallest Node will call for the findSmallest function and will return the smallest Node in the tree
+   - Find Largest Node will call fof the findLargest finction and will return the largest Node in the tree. 
+
+2. What challenges did you encounter while completing this program? How did you resolve these challenges?
+ - I didn't have much troble with add, delete, findSmallest, findLargest, display, and inOrderTraversal. I did have trouble with the search function. I couldn't think of a way to search and I tried many different ways like boolean and an array list. I ended up using void and the TreeNode becasue I went back to an old assignment in 146 where we used a BST for a fruit problem. Even though that program was in Java it was simple enough for me to convert it into C++. 
+
+3. Any compilation instructions, if applicable
+ - None
+ 
